@@ -132,7 +132,13 @@ final class CalendarViewDelegate {
      */
     private int mCurDayTextColor,
             mCurDayLunarTextColor,
-            mWeekTextColor,
+            mWeekSunTextColor,
+            mWeekMonTextColor,
+            mWeekTueTextColor,
+            mWeekWedTextColor,
+            mWeekThuTextColor,
+            mWeekFriTextColor,
+            mWeekSatTextColor,
             mSchemeTextColor,
             mSchemeLunarTextColor,
             mOtherMonthTextColor,
@@ -463,7 +469,13 @@ final class CalendarViewDelegate {
         mWeekBackground = array.getColor(R.styleable.CalendarView_week_background, Color.WHITE);
         mWeekLineBackground = array.getColor(R.styleable.CalendarView_week_line_background, Color.TRANSPARENT);
         mYearViewBackground = array.getColor(R.styleable.CalendarView_year_view_background, Color.WHITE);
-        mWeekTextColor = array.getColor(R.styleable.CalendarView_week_text_color, 0xFF333333);
+        mWeekSunTextColor = array.getColor(R.styleable.CalendarView_week_sun_text_color, 0xFF333333);
+        mWeekMonTextColor = array.getColor(R.styleable.CalendarView_week_mon_text_color, 0xFF333333);
+        mWeekTueTextColor = array.getColor(R.styleable.CalendarView_week_tue_text_color, 0xFF333333);
+        mWeekWedTextColor = array.getColor(R.styleable.CalendarView_week_wed_text_color, 0xFF333333);
+        mWeekThuTextColor = array.getColor(R.styleable.CalendarView_week_thu_text_color, 0xFF333333);
+        mWeekFriTextColor = array.getColor(R.styleable.CalendarView_week_fri_text_color, 0xFF333333);
+        mWeekSatTextColor = array.getColor(R.styleable.CalendarView_week_sat_text_color, 0xFF333333);
 
         mCurDayTextColor = array.getColor(R.styleable.CalendarView_current_day_text_color, Color.RED);
         mCurDayLunarTextColor = array.getColor(R.styleable.CalendarView_current_day_lunar_text_color, Color.RED);
@@ -621,9 +633,32 @@ final class CalendarViewDelegate {
     int getCurDayLunarTextColor() {
         return mCurDayLunarTextColor;
     }
+    int getWeekSunTextColor() {
+        return mWeekSunTextColor;
+    }
 
-    int getWeekTextColor() {
-        return mWeekTextColor;
+    int getWeekMonTextColor() {
+        return mWeekMonTextColor;
+    }
+
+    int getWeekTueTextColor() {
+        return mWeekTueTextColor;
+    }
+
+    int getWeekWedTextColor() {
+        return mWeekWedTextColor;
+    }
+
+    int getWeekThuTextColor() {
+        return mWeekThuTextColor;
+    }
+
+    int getWeekFriTextColor() {
+        return mWeekFriTextColor;
+    }
+
+    int getWeekSatTextColor() {
+        return mWeekSatTextColor;
     }
 
     int getSchemeTextColor() {

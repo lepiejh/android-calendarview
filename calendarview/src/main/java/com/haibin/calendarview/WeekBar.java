@@ -44,7 +44,23 @@ public class WeekBar extends LinearLayout {
         this.mDelegate = delegate;
         if ("com.haibin.calendarview.WeekBar".equalsIgnoreCase(getClass().getName())) {
             setTextSize(mDelegate.getWeekTextSize());
-            setTextColor(delegate.getWeekTextColor());
+            for (int i = 0; i < getChildCount(); i++) {
+                if (i == 0){
+                    ((TextView) getChildAt(i)).setTextColor(delegate.getWeekSunTextColor());
+                }else if (i == 1){
+                    ((TextView) getChildAt(i)).setTextColor(delegate.getWeekMonTextColor());
+                }else if (i == 2){
+                    ((TextView) getChildAt(i)).setTextColor(delegate.getWeekTueTextColor());
+                }else if (i == 3){
+                    ((TextView) getChildAt(i)).setTextColor(delegate.getWeekWedTextColor());
+                }else if (i == 4){
+                    ((TextView) getChildAt(i)).setTextColor(delegate.getWeekThuTextColor());
+                }else if (i == 5){
+                    ((TextView) getChildAt(i)).setTextColor(delegate.getWeekFriTextColor());
+                }else if (i == 6){
+                    ((TextView) getChildAt(i)).setTextColor(delegate.getWeekSatTextColor());
+                }
+            }
             setBackgroundColor(delegate.getWeekBackground());
             setPadding(delegate.getCalendarPaddingLeft(), 0, delegate.getCalendarPaddingRight(), 0);
         }
